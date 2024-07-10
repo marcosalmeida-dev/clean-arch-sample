@@ -7,9 +7,20 @@ The project was generated using the [Clean.Architecture.Solution.Template](https
 Run `dotnet build -tl` to build the solution.
 
 ## Run
-
 You can run using Docker:
 https://www.docker.com/products/docker-desktop/
+
+Download SQL Server image
+```bash
+docker pull mcr.microsoft.com/mssql/server
+```
+Run the container
+```bash
+docker run -e "ACCEPT_EULA=1" -e "SA_PASSWORD=CleanArch123” -p 1433:1433 -d --name=sqlserver mcr.microsoft.com/mssql/server
+```
+PS: I know is not a good practice to use SA as DB User, but I leave it this way to avoid permissions issues to create database and run migrations.
+
+Run docker-compose
 ```bash
 docker-compose up --build;
 ```
@@ -17,6 +28,9 @@ docker-compose up --build;
 OR
 
 To run the web application:
+Download:
+.NET Runtime: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+NodeJs: https://nodejs.org/en/download/package-manager
 
 ```bash
 cd .\src\Web\
@@ -24,9 +38,6 @@ dotnet watch run
 ```
 
 Navigate to https://localhost:5001. The application will automatically reload if you change any of the source files.
-
-In both ways you need to have SQL Server instance running locally, you can use docker or local instance.
-PS: I know is not a good practice to use SA as DB User, but I leave it this way to avoid permissions issues to create database and run migrations.
 
 ## Code Styles & Formatting
 
