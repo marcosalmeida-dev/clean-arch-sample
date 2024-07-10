@@ -31,8 +31,8 @@ To run the web application:
 
 Download:
 
-[.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-[NodeJs](https://nodejs.org/en/download/package-manager)
+[.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+[NodeJs](https://nodejs.org/en/download/package-manager).
 
 ```bash
 cd .\src\Web\
